@@ -4,10 +4,8 @@ import time
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-intents = discord.Intents.default()
-
-TOKEN = open("/home/pi/share/crypto-price-bot/token.txt", "r").read()
-client = Bot(command_prefix="$", intents=intents)
+TOKEN = open("token.txt", "r").read()
+client = Bot(command_prefix="$", intents=discord.Intents.default())
 
 client.modules = ['bsctools', 'jishaku']
 
